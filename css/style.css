@@ -168,7 +168,7 @@ header {
   width: 170px;
   font-size: 12px;
   text-decoration: none;
-  color: #ddd;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -483,7 +483,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: calc(100vh - 130px);
 }
 
 .container .content > div {
@@ -698,6 +697,7 @@ footer .content {
       -ms-flex-align: top;
           align-items: top;
   height: 100%;
+  padding: 10px 20px;
 }
 
 footer .content p {
@@ -874,7 +874,7 @@ footer .content > div:last-child {
   .card-form {
     position: absolute !important;
     right: 10%;
-    top: 30%;
+    top: 15%;
   }
   .main-nav-holder {
     left: 0;

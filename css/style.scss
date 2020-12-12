@@ -70,7 +70,7 @@ header {
 #cssmenu li:hover > ul{left:auto}
 #cssmenu li:hover > ul > li{height:35px}
 #cssmenu ul ul ul{margin-left:100%;top:0}
-#cssmenu ul ul li a{padding:11px 15px;width:170px;font-size:12px;text-decoration:none;color:#ddd;font-weight:400;}
+#cssmenu ul ul li a{padding:11px 15px;width:170px;font-size:12px;text-decoration:none;color:#fff;font-weight:400;}
 #cssmenu ul ul li:last-child > a,#cssmenu ul ul li.last-item > a{border-bottom:0}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li a:hover{color:#fff}
 #cssmenu ul ul li.has-sub > a:after{position:absolute;top:16px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
@@ -227,14 +227,10 @@ img {
 
     padding-top: 70px;
 
-
-
     .content {
  
             display: flex;
-            justify-content: space-between;
-            height: calc(100vh - 130px);
-        
+            justify-content: space-between;       
     
         > div{
             margin-top: 15px;
@@ -435,7 +431,7 @@ footer {
         justify-content: space-between;
         align-items: top;
         height: 100%;
-
+        padding: 10px 20px;
         p {
             margin-bottom: 10px;
             font-size: 12px;
@@ -636,7 +632,7 @@ footer {
   .card-form {
     position: absolute !important;
     right: 10%;
-    top: 30%
+    top: 15%
 }
   .main-nav-holder {
     left: 0;
