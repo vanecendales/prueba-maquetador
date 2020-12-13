@@ -4,7 +4,8 @@
 	box-sizing: border-box;
 	  margin: 0;
 	  padding: 0;
-	  word-break: break-all;
+      word-break: break-all;
+      font-family: 'Open Sans', sans-serif!important;
   }
   body, html {
     color: #6e6e6e;
@@ -13,7 +14,6 @@
     font-size: 14px;
     height: 100vh;
     margin: 0px;
-    overflow: hidden;
 }
 .content{
 	max-width: 1170px;
@@ -36,7 +36,7 @@
   //footer
 	.footer {
 		grid-area: footer;
-		background: #7C7C7C;
+		background: #7c7c7c;
 		height: 125px;
 		color: white;
 		z-index: 99;
@@ -45,7 +45,7 @@
 			display:flex;
 			justify-content: space-between;
 			align-items: top;
-			padding-top: 8px;
+			padding-top: 13px;
 
 			>div {
 				width: 100%;
@@ -62,9 +62,7 @@
 				}
 				p{
 					margin-bottom: 7px;
-					@media (max-width: 678px) {
-						display:none
-					}
+				
 				}
 				ul {
 					margin-left: 30px;
@@ -109,7 +107,7 @@
      "footer"
   }
 
-	@media only screen and (max-width:1024px)  {
+	@media only screen and (max-width:1169px)  {
 	.wrapper {
 
 		grid-template-columns: 1fr;
@@ -117,11 +115,11 @@
     	"header"		
 		"form"
 		"footer";
-		grid-template-rows: 70px auto 120px;
+		grid-template-rows: 70px auto 130px;
 	}
     }
 
-	@media only screen and (min-width: 1025px)   {
+	@media only screen and (min-width: 1170px)   {
 		.wrapper {
       grid-gap: 0px;
 			grid-template-columns:1fr;
@@ -130,7 +128,7 @@
 			"form"
 			"footer ";
 			width: 100vw;
-			grid-template-rows: 70px auto 120px;
+			grid-template-rows: 70px auto 130px;
 		}
 	}
 
@@ -295,7 +293,7 @@
 #cssmenu ul ul li.has-sub:hover,#cssmenu ul li.has-sub ul li.has-sub ul li:hover{background:#363636;}
 
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1169px){
     
 .logo{
 	position:absolute;
@@ -320,7 +318,6 @@ nav{
         width: 100vw;
         display: none;
         background: #212121;
-
         position: fixed;
         left: 0;
 	}
@@ -454,7 +451,7 @@ ul.submenu {
         }
 
         > .slider, .card-form {
-            height: 51vh;
+            height: 70vh;
             overflow: hidden;
             position: relative;
 
@@ -488,6 +485,10 @@ ul.submenu {
     margin: 10px;
     position: absolute;
     bottom: 0;
+
+    .disabled{
+        opacity: 0.5;
+    }
  }
  .arrows {
     display: flex;
@@ -524,7 +525,7 @@ ul.submenu {
             padding: 20px;
             -webkit-box-shadow: inset 0 8px 0 0 #36aadd;
                     box-shadow: inset 0 8px 0 0 #36aadd;
-            height:100%;
+           
         }
             
         .form-body{
@@ -551,7 +552,7 @@ ul.submenu {
                       color: transparent;
                     }  
                     option {
-                        color: gray;
+                        columns: #7c7c7c;;
                       }
                   
                   }                
@@ -573,8 +574,8 @@ ul.submenu {
                   outline: none;
                   border: none;
                   background: #fff;
-                  color: #576366;
-                  font-size: 14px;
+                  color:#757575 !important;
+                  font-size: 16px;
                 }
               }
             }
@@ -621,6 +622,47 @@ ul.submenu {
   
     
     @media (max-width: 1169px) {
+        .title {
+            font-size: 0.8rem;
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+        .form-body{
+    
+            .form-item__element--select {
+                  
+                    &:invalid {
+                        color: #757575 !important;
+                    }
+                    [disabled] {
+                        color: #757575 !important;
+                      }  
+            }
+        }
+        .card-form {
+            .form-body {
+                .row {
+                    padding: 5px 0;
+                }
+            }
+            .form-footer button {
+                margin-top: 5px;
+            }
+            
+            .card-form .form-body .form-item__element--select:invalid {
+                color: #9E9E9E!important;
+            }
+        }
+       
+        button {
+            width: 100%;
+        }
+        label {
+            display:none!important;
+        }
+        
         .container {
             .content {
                 display: block!important;
@@ -629,17 +671,61 @@ ul.submenu {
                 max-width: 100vw;
 
                 .card-form {
-                    position: absolute!important;
-                    top: 0;
-                    height: auto!important;
+                    position: fixed;
                     right: 9%;
-                    top: 9%;
+                    top: 30%;
+                    bottom: 33%;
+                    margin: 0px;
+                    overflow: visible;
+                    width: 450px;
+                    -webkit-transform: scale(0.8);
+                    transform: scale(0.8);
                 }
-            }
+                .slider{                
+                        position: fixed;
+                        height: calc(100vh - 130px);
+                    
+                 
+                    & img {
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+                }
+            } 
         }
     }
-    @media (min-width: 1025px) {
-    
+    @media (min-width: 1170px) {
+        ::-webkit-input-placeholder {
+            color:transparent;
+         }
+         
+         :-moz-placeholder { /* Firefox 18- */
+            color:transparent; 
+         }
+         
+         ::-moz-placeholder {  /* Firefox 19+ */
+            color:transparent; 
+         }
+         
+         :-ms-input-placeholder {  
+            color:transparent;
+         }
+        .card-form .form-body .row input[type="text"]{
+            color:transparent
+        }
+        .signup{
+            box-shadow: none!important;
+        }
+        .container .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            max-height: 600px;
+            overflow: hidden;
+        }
+        .card-form .signup {
+           height: 100%; 
+        }
     #cssmenu > ul > li.has-sub a:after{
         display:none;
     }
@@ -662,3 +748,33 @@ ul.submenu {
         }
     }
 }
+
+
+
+@media (max-width: 660px) {
+    .container .content .card-form {
+        right: 4%;
+        left: 4%;
+        width: auto;
+    }
+    .container .content .slider {
+            height: 40vh;
+        }
+    .card-form {
+            width: auto!important;
+        }
+    .arrows {
+        display: none;
+        }
+        
+    .footer {
+            grid-area: footer;
+            background: #7c7c7c;
+            height: 125px;
+            color: white;
+            z-index: 99;
+            font-size: 0.8rem;
+
+    p { display: none; }
+        }
+    }
