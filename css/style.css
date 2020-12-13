@@ -93,7 +93,7 @@ header {
   float: left;
 }
 
-#cssmenu > ul > li > a {
+#cssmenu > ul > li a {
   padding: 17px;
   letter-spacing: 1px;
   text-decoration: none;
@@ -674,12 +674,10 @@ footer .copyright {
   color: white;
   text-align: center;
   padding: 10px 0;
-  bottom: -25px;
   width: 100%;
   left: 0;
   font-size: 12px;
   font-weight: 500;
-  position: absolute;
 }
 
 footer .controls {
