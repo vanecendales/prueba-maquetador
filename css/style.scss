@@ -534,14 +534,19 @@ footer {
   
   .Site-content {
     flex: 1;
+    min-height: 100%;
   }
 
 // ****Responsive CSS *****//
-
+@media (min-width: 1229px) {
+    .container .content > div {
+        height:51vh!important
+    }
+}
 // Desktop
 @media (min-width: 1025px) {
     .container .content > div {
-        height:70vh
+        height:70vh!important
     }
     #cssmenu > ul > li.has-sub a:after{
         display:none;
@@ -616,11 +621,7 @@ footer {
     .container .content > div {
         height: auto!important;
     }
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100vw;
-    }
+
     //formulario
     .signup{
         .form-item__element--select {
@@ -794,7 +795,7 @@ footer {
         min-width: 290px !important;
         margin: 0 auto;
         height: auto !important;
-        top:20%;
+        top:23%;
         z-index: 999;
         left: 10%;
         right: 10%;
@@ -804,7 +805,7 @@ footer {
 
     }
     .arrows {
-        display: none;
+        display: none!important;
     }
 }
 

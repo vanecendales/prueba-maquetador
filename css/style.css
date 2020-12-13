@@ -746,11 +746,18 @@ footer .content > div:last-child {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-height: 100%;
+}
+
+@media (min-width: 1229px) {
+  .container .content > div {
+    height: 51vh !important;
+  }
 }
 
 @media (min-width: 1025px) {
   .container .content > div {
-    height: 70vh;
+    height: 70vh !important;
   }
   #cssmenu > ul > li.has-sub a:after {
     display: none;
@@ -819,11 +826,6 @@ footer .content > div:last-child {
 @media (max-width: 1024px) {
   .container .content > div {
     height: auto !important;
-  }
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
   }
   .signup .form-item__element--select:invalid {
     color: #999 !important;
@@ -960,7 +962,7 @@ footer .content > div:last-child {
     min-width: 290px !important;
     margin: 0 auto;
     height: auto !important;
-    top: 20%;
+    top: 23%;
     z-index: 999;
     left: 10%;
     right: 10%;
@@ -969,7 +971,7 @@ footer .content > div:last-child {
     position: static;
   }
   .arrows {
-    display: none;
+    display: none !important;
   }
 }
 
