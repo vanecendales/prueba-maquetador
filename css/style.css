@@ -353,6 +353,9 @@ body, html {
     background: #212121;
     position: fixed;
     left: 0;
+    z-index: 999;
+    top: 70px;
+    height: auto !important;
   }
   #cssmenu > ul {
     height: 100%;
@@ -432,7 +435,7 @@ body, html {
     border-bottom: 2px solid #dddddd;
     content: '';
   }
-  .buttonbefore {
+  .button:before {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     position: absolute;
