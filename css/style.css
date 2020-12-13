@@ -98,7 +98,7 @@ body, html {
   left: 0;
   font-size: 12px;
   font-weight: 500;
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
 .wrapper {
@@ -333,13 +333,16 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 46px;
+    line-height: 70px;
     text-align: center;
     padding: 10px 0 0 0;
     float: none;
   }
   .logo2 {
     display: none;
+  }
+  .logo2 a {
+    line-height: 70px;
   }
   nav {
     width: 100%;
