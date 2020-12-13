@@ -100,15 +100,11 @@ header {
   color: #ddd;
 }
 
-#cssmenu > ul > li:hover > a, #cssmenu ul li.active a {
-  color: #fff;
-}
-
-#cssmenu > ul > li.has-sub > a {
+#cssmenu > ul > li.has-sub a {
   padding-right: 30px;
 }
 
-#cssmenu > ul > li.has-sub > a:after {
+#cssmenu > ul > li.has-sub a:after {
   position: absolute;
   top: 22px;
   right: 11px;
@@ -119,7 +115,7 @@ header {
   content: '';
 }
 
-#cssmenu > ul > li.has-sub > a:before {
+#cssmenu > ul > li.has-sub aa:before {
   position: absolute;
   top: 19px;
   right: 14px;
@@ -130,6 +126,10 @@ header {
   content: '';
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
+}
+
+#cssmenu > ul > li:hover > a, #cssmenu ul li.active a {
+  color: #fff;
 }
 
 #cssmenu > ul > li.has-sub:hover > a:before {
@@ -318,7 +318,7 @@ header {
     border-bottom: 2px solid #dddddd;
     content: '';
   }
-  .button:before {
+  .buttonbefore {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     position: absolute;
@@ -448,7 +448,7 @@ header {
 .slider img {
   max-width: 100%;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 .sliderimg {
@@ -501,7 +501,7 @@ header {
 }
 
 .container .content > .slider {
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
   position: relative;
 }
@@ -519,6 +519,9 @@ header {
 
 .container .content .controls {
   height: 100%;
+  position: absolute;
+  z-index: 9;
+  width: 100px;
 }
 
 .container .content .prev, .container .content .next {
@@ -527,11 +530,11 @@ header {
   height: 40px;
   border-radius: 30px;
   margin: 10px;
+  position: absolute;
+  bottom: 0;
 }
 
 .container .content .arrows {
-  top: 60%;
-  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -540,15 +543,16 @@ header {
       align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: absolute;
 }
 
 .container .content .prev {
   background: url("../img/arrow-left.svg") no-repeat center #fff;
+  left: 0;
 }
 
 .container .content .next {
   background: url("../img/arrow-right.svg") no-repeat center #fff;
+  left: 60px;
 }
 
 .container .content #counter {
@@ -667,6 +671,7 @@ footer {
   background: #7C7C7C;
   height: 125px;
   color: white;
+  z-index: 99;
 }
 
 footer .copyright {
@@ -745,7 +750,10 @@ footer .content > div:last-child {
 
 @media (min-width: 1025px) {
   .container .content > div {
-    height: 60vh;
+    height: 70vh;
+  }
+  #cssmenu > ul > li.has-sub a:after {
+    display: none;
   }
   #cssmenu ul ul {
     position: absolute;
@@ -952,7 +960,7 @@ footer .content > div:last-child {
     min-width: 290px !important;
     margin: 0 auto;
     height: auto !important;
-    top: 40%;
+    top: 20%;
     z-index: 999;
     left: 10%;
     right: 10%;
@@ -967,7 +975,7 @@ footer .content > div:last-child {
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .card-form {
-    top: 20%;
+    top: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
